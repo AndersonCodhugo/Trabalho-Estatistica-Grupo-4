@@ -1,0 +1,11 @@
+# Ambiente virtual - cada pessoa cria o seu com requirements.txt, nunca sobe pro GitHub
+.venv/
+venv/
+env/
+
+# Cache do Python - gerado automaticamente, não precisa versionar
+__pycache__/
+*.pyc
+
+# Arquivos de sistema comuns
+.DS_Store
