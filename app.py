@@ -97,13 +97,6 @@ if entrada_texto:
             st.plotly_chart(fig_bar, width='stretch')
 
             
-            try:
-                st.download_button(
-                    "⬇️ Baixar gráfico de barras (PNG)", _gerar_png_cache(fig_bar, entrada_texto, "barras"),
-                    "grafico_barras.png", "image/png"
-                )
-            except Exception:
-                st.caption("⚠️ Exportação em PNG indisponível neste ambiente (rode `plotly_get_chrome` uma vez).")
            
 
         with col_graf2:
@@ -114,14 +107,7 @@ if entrada_texto:
             fig_pie.update_traces(textinfo='percent+label')
             st.plotly_chart(fig_pie, width='stretch')
 
-            
-            try:
-                st.download_button(
-                    "⬇️ Baixar gráfico de pizza (PNG)", _gerar_png_cache(fig_pie, entrada_texto, "pizza"),
-                    "grafico_pizza.png", "image/png"
-                )
-            except Exception:
-                st.caption("⚠️ Exportação em PNG indisponível neste ambiente (rode `plotly_get_chrome` uma vez).")
+        
             
     else:
         st.warning("Por favor, insira pelo menos um dado válido.")
